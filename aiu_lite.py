@@ -13,4 +13,4 @@ selected = st.sidebar.multiselect(
 if 'all' in selected:
     st.write(np.array(values))
 else:
-    st.write(np.array(selected))
+    st.write(np.array([values[i] for i in map(int, selected)]))
